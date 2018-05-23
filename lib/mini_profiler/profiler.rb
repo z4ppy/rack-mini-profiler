@@ -154,7 +154,7 @@ module Rack
 
       start = Process.clock_gettime(Process::CLOCK_MONOTONIC)
       client_settings = ClientSettings.new(env, @storage, start)
-      MiniProfiler.deauthorize_request if @config.authorization_mode == :whitelist
+      #MiniProfiler.deauthorize_request if @config.authorization_mode == :whitelist
 
       status = headers = body = nil
       query_string = env['QUERY_STRING']
